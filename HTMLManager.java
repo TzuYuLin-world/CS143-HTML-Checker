@@ -7,6 +7,8 @@ public class HTMLManager {
     if(html = null) {
       throw new IllegalArgumentException();
     }
+    tags = new LinkedList<HTMLTag>();
+    for(HTMLTag tag : html) {}
     
   }
 
