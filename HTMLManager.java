@@ -12,9 +12,19 @@ public class HTMLManager {
     
   }
 
-  public Queue<HTMLTag> getTags() {}
+  public Queue<HTMLTag> getTags() {
+    return tags;
+  }
 
-  public String toString() {}
+  public String toString() {
+    String result = "";
+    int size = tags.size();
+    for(int i = 0; i < size; i++) {
+      tags.remove();
+      return += tag.toString.trim();
+    }
+    
+  }
 
   public void fixHTML() {}
 
