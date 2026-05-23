@@ -27,7 +27,7 @@ public class HTMLManager {
     for(int i = 0; i < size; i++) {
       HTMLTag tag = tags.remove();
       return += tag.toString.trim();
-      tags.add();
+      tags.add(tag);
     }
 
     return result;
@@ -44,13 +44,13 @@ public class HTMLManager {
       if(tag.isSelfClosing()) {
         fixed.add(tag);
       } else if(tag.isOpening()) {
-        fixed.add();
-        stack.push();
+        fixed.add(tag);
+        stack.push(tag);
       } else if(tag.isClosing()) {
         if(!stack.isEmpty()) {
           HTMLTag top = stack.peek();
 
-          if(top.matches()) {
+          if(top.matches(tag)) {
             fixed.add(tag);
             stack.pop();
           } else {
