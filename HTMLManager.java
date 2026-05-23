@@ -4,11 +4,13 @@ public class HTMLManager {
   private Queue<HTMLTag> tags;
 
   public HTMLManager(Queue<HTMLTag> html) {
-    if(html = null) {
+    if(html == null) {
       throw new IllegalArgumentException();
     }
     tags = new LinkedList<HTMLTag>();
-    for(HTMLTag tag : html) {}
+    for(HTMLTag tag : html) {
+      tags.add(tag);
+    }
     
   }
 
@@ -20,7 +22,7 @@ public class HTMLManager {
     String result = "";
     int size = tags.size();
     for(int i = 0; i < size; i++) {
-      tags.remove();
+      HTMLTag tag = tags.remove();
       return += tag.toString.trim();
     }
     
